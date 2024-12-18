@@ -1,0 +1,62 @@
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+body {
+    font-family:Arial, Helvetica, sans-serif;
+    background-color:#f4f4f4;
+    padding: 1em;
+    margin: 0 auto;
+    width:60%;
+}
+.container{
+    background-color:white;
+    padding: 2em;
+    box-shadow: 5px 5px 15px lightgray;
+}
+header {
+    text-align:center;
+    padding-bottom:1em;
+}
+.contact-info{
+    text-align: center;
+}
+.contact-info p {
+    display: inline;
+}
+header h1{
+    font-size: 1.5em;
+    margin:.5em;
+}
+h2 {
+    padding-bottom: .25em;
+}
+.job {
+    margin: 1em 0;
+}
+.job li {
+    padding: .25em 0;
+    margin-left: .5em;
+}
+.job-title{
+    font-weight:bold;
+}
+.job-date{
+    margin: .5em 0 ;
+    font-style:italic;
+    color: #666;
+}
+p {
+    padding: .5em 0;
+}
+section { 
+    padding: 1em 0 0 0;
+}
+hr {
+    border: 1.5px solid black;
+}
+.skills-list {
+    padding: 1em 0;
+    list-style-type: none;
+}
