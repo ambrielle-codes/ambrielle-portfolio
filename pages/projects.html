@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/nav-footer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Antic&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,1)), url(../images/feathers.jpg);
+        }
+
+        .container {
+            padding: 2em 0;
+            justify-content: space-around;
+            align-items: baseline;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .container > div {
+            padding: 1em;
+            background-color: black;
+            color:white;
+            border: 1px solid white;
+            max-width:20%;
+        }
+
+        .container ul {
+            padding: .5em 0;
+            list-style-type: none;
+            display: flex;
+            gap: .25em;
+            flex-wrap:wrap;
+        }
+
+        .container ul li {
+            max-width:fit-content;
+            border: 1px solid white;
+            padding: .5em;
+        }
+
+        img {
+            background-color: white;
+            max-width: 300px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                gap: 1.5em;
+            }
+
+            .container > div {
+                max-width: 80%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <h1>Ambrielle Gallegos</h1>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div>
+            <h2>Simple Resume</h2>
+            <img src="#" alt="">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam laudantium beatae aperiam saepe optio id hic pariatur voluptatem ab eveniet!</p>
+            <div>
+                <ul>
+                    <li>HTML/CSS</li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <h2>Blog Page</h2>
+            <img src="#" alt="">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum expedita itaque eveniet autem porro, similique esse quisquam fugit dignissimos modi.</p>
+            <div>
+                <ul>
+                    <li>HTML/CSS</li>
+                    <li>CSS Flexbox</li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <h2>Photo Collage</h2>
+            <img src="#" alt="">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio quas excepturi unde voluptatem omnis ut magni in eius amet atque!</p>
+            <div>
+                <ul>
+                    <li>HTML/CSS</li>
+                    <li>CSS Grid</li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <h2>Adventure Travel Club Form</h2>
+            <img src="#" alt="">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam ipsum labore eius quibusdam repudiandae, rerum deserunt eum consequuntur corrupti architecto!</p>
+            <div>
+                <ul>
+                    <li>HTML/CSS</li>
+                    <li>CSS Grid</li>
+                    <li>CSS Flexbox</li>
+                    <li>HTML Forms</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <table>
+            <tr>
+                <td>Email</td>
+                <td><a href="mailto:ambrielleg.legos@gmail.com">ambrielleg.legos@gmail.com</a></td>
+            </tr>
+            <tr>
+                <td>Github</td>
+                <td><a href="https://github.com/ambrielle-codes/">ambrielle-codes</a></td>
+            </tr>
+            <tr>
+                <td>Phone</td>
+                <td>(602)-377-4516</td>
+            </tr>
+        </table>
+        <hr>
+        <p>&copy; 2024 Ambrielle Gallegos. All Rights Reserved.</p>
+    </footer>    
+</body>
+</html>
