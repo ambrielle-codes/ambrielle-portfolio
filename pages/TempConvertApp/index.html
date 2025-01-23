@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="sun.png">
+</head>
+<body>
+    <div class="flex-container">
+        <div class="container">
+            <h1>Temperature Converter</h1>
+            <div class="main">
+                <input id="inputNum" class="inline" type="number">
+                <p class="inline">degrees<p>
+                <select id="inputUnit" class="inline">
+                    <option value="f">Fahrenheit</option>
+                    <option value="c">Celcius</option>
+                </select>
+                <p class="inline">is </p>
+                <input id="output" class="inline" type="text" readonly>
+                <br>
+                <button id="button" onclick="convert()">Convert</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
