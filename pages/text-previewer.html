@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Font Style Previewer + Font Size Adjuster</title>
+<!-- CSS styles are here -->
+<style>
+   body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        line-height: 1.6;
+        text-align: center;
+    }
+    #preview {
+        margin: 20px 0;
+        padding: 10px;
+        border: 1px solid #ccc;
+    }
+    input, select {
+        margin: 10px;
+        padding: 5px;
+        font-size: 16px;
+    }
+</style>
+</head>
+<body>
+<!-- Main content is here -->
+<!-- A heading (<h1>) displaying “Font Style Pre-
+    viewer” - A preview div where text will be displayed - Input fields for user
+    interaction: - Text input - Font family dropdown - Font weight dropdown -
+    Font style dropdown - JavaScript code embedded at the bottom -->
+
+    <h1>Font Style Previewer</h1>
+    <div id="preview"></div>
+    <input type="text" id="userText">
+    <select name="fontFamily" id="fontFamily">
+        <option value="Arial">Arial</option>
+        <option value="Times New Roman">Times New Roman</option>
+    </select>
+
+    <select name="fontWeight" id="fontWeight">
+        <option value="400">Normal</option>
+        <option value="bold">Bold</option>
+    </select>
+    
+    <select name="fontStyle" id="fontStyle">
+        <option value="normal">Normal</option>
+        <option value="italic">Italic</option>
+    </select>
+
+    <div class="fontSizeContainer">
+        <h1>Font Size Adjuster</h1>
+        <input type="range" id="fontSizeSlider" min="10" max="40" value="16">
+        <button id="increaseFont">Increase Font Size</button>
+        <button id="decreaseFont">Decrease Font Size</button>
+    </div>
+    <script>
+        document.getElementById('userText').addEventListener('input', function() {
+            document.getElementById('preview').textContent = this.value || "Sample text";
+        });
+        document.getElementById('fontFamily').addEventListener('change', function() {
+            document.getElementById('preview').style.fontFamily = this.value;
+        });
+        document.getElementById('fontWeight').addEventListener('change', function() {
+            document.getElementById('preview').style.fontWeight = this.value;
+        });
+        document.getElementById('fontStyle').addEventListener('change', function() {
+            document.getElementById('preview').style.fontStyle = this.value;
+        });
+
+        const textElement = document.getElementById('preview'); 
+        const fontSizeSlider = document.getElementById('fontSizeSlider');
+        const increaseFontBtn = document.getElementById('increaseFont');
+        const decreaseFontBtn = document.getElementById('decreaseFont');
+        
+        fontSizeSlider.addEventListener('input', function() {
+
+            textElement.style.fontSize = fontSizeSlider.value + 'px';
+
+        });
+
+        increaseFontBtn.addEventListener('click', function() {
+            let currentSize = parseInt(window.getComputedStyle(textElement).fontSize);
+            textElement.style.fontSize = (currentSize + 1) + 'px';
+            fontSizeSlider.value = currentSize + 1;
+        });
+
+        decreaseFontBtn.addEventListener('click', function() {
+            let currentSize = parseInt(window.getComputedStyle(textElement).fontSize);
+            textElement.style.fontSize = (currentSize - 1) + 'px';
+            fontSizeSlider.value = currentSize - 1;
+        });
+
+    </script>
+</body>
+</html>
