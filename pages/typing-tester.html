@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Speed Tester</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 20px;
+            text-align: center;
+        }
+
+        textarea {
+            width: 80%;
+            margin-top: 10px;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 16px
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Typing Speed Tester</h1>
+    <p id="testParagraph">The quick brown fox jumps over the lazy dog.</p>
+    <textarea id="typingArea" cols="50" rows="6" placeholder="Start typing..." disabled></textarea>
+    <br>
+    <button id="startButton">Start Test</button>
+    <p id="result"></p>
+    <script>
+        document.getElementById('startButton').addEventListener('click', function(){
+            const testParagraph = document.getElementById('testParagraph').innerText;
+            const typingArea = document.getElementById('typingArea');
+            const resultDisplay = document.getElementById('result');
+
+            typingArea.disabled = false;
+            typingArea.value = '';
+            resultDisplay.innerText = '';
+            typingArea.focus();
+
+            let startTime = null;
+            function calculateSpeed(){
+                if(!startTime){
+                    startTime = new Date().getTime();
+                }
+                const currentTime = new Date().getTime();
+                const totalTime = (currentTime - startTime) / 1000;
+                const textEntered = typingArea.value.trim();
+                const wordCount = textEntered.split(/\s+/).length;
+                const speed = Math.round((wordCount / totalTime) * 60);
+                return speed;
+            }
+            
+
+            typingArea.addEventListener('input', function(){
+                const speed = calculateSpeed();
+                const textEntered = typingArea.value;
+                
+                if (textEntered === testParagraph) {
+                    typingArea.disabled = true;
+                    const finalSpeed = calculateSpeed();
+                    resultDisplay.textContent = `Congratulations! You completed the test. Your typing speed was ${finalSpeed} words per minute.`
+                } else {
+                    resultDisplay.textContent = `Your current typing speed is ${speed} words per minute. Keep tying...`;
+                }
+            })
+        });   
+    </script>
+</body>
+</html>
