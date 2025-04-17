@@ -3,24 +3,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basic Task Manager Web App</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Task Manager with Local Storage</title>
+    <script src="script1.js" defer></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            background-color: ghostwhite;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .container {
+            width: 600px;
+            text-align: center;
+            box-shadow: 2px 2px 2px grey;
+            background-color: white;
+            padding: 50px;
+        }
+
+        .container h1 {
+            padding: 10px 0;
+        }
+
+        .input-section{
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 15px;
+            border:none;
+            cursor: pointer;
+            color: white;
+            border-radius: 10px;
+        }
+
+        .add-button{
+            background-color: orange;
+            margin-left: 5px;
+        }
+
+        .clear-all{
+            display: block;
+            margin-top: 20px;
+            cursor: pointer;
+            color: white;
+            font-size: 16px;
+            background-color: red;
+        }
+
+        .task-list {
+            margin-top: 10px;
+            padding: 20px;
+            background-color:rgb(207, 207, 207);
+            border: 3px rgb(183, 183, 183) inset;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .task-item {
+            word-wrap: break-word;
+            background-color: white;
+            color: black;
+            font-size: .8rem;
+            display: flex;
+            flex-direction: row;
+            border-radius: 10px;
+            gap: 10px;
+            margin: 5px;
+            
+        }
+
+        .no-tasks {
+            font-style: italic;
+        }
+
+        .status-bar {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 15px;
+        }
+
+        .status-bar > * {
+            padding: 5px;
+        }
+
+        #task-list {
+            list-style-type: none;
+        }
+
+        .task-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px;
+            background-color: white;
+            margin-bottom: 8px;
+        }
+
+        #task-input {
+            padding: 0 5px;
+        }
+
+        .delete-btn {
+            background-color: red;
+            color: white;
+        }
+
+    </style>
 </head>
 <body>
     <div class="container">
-        <h2>Task Manager</h2>
-       
+        <h1>Task Manager</h1>
         <div class="input-section">
-            <input type="text" id="taskInput" placeholder="Enter a new task">
-            <button onclick="addTask()">Add Task</button>
+            <input type="text" id="task-input" placeholder="Add a new task">
+            <button id="add-button" class="add-button">Add</button>
         </div>
-    
 
-        <div id="taskList" class="task-list">
-            <!-- Tasks will be displayed here -->
+
+        <div id="no-tasks" class="no-tasks">
+            No tasks yet! Add a task to get started.
         </div>
+
+        <ul class="task-list" id="task-list"></ul>
+
+        <div class="status-bar">
+            <span id="tasks-count">Total: 0 tasks</span>
+            <span id="completed-count">Completed: 0</span>
+        </div>
+
+        <button id="clear-all" class="clear-all">Clear All Tasks</button>
+
+
+
     </div>
-   <script src="script.js"></script>
+
 </body>
 </html>
-
