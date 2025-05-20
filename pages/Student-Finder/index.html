@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Student Example</title>
+    <!-- Link to our CSS file -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Student Finder</h1>
+        
+        <div class="search-box">
+            <input 
+                type="number" 
+                id="studentId" 
+                placeholder="Enter student ID (1-4)"
+                min="1"
+                max="4"
+            >
+            <button onclick="findStudent()">Find Student</button>
+        </div>
+
+        <!-- We'll style this div to make results look better -->
+        <div id="result" class="result-box"></div>
+    </div>
+
+    <!-- Link to our JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -9,17 +9,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Antic&display=swap" rel="stylesheet">
     <style>
+
         body {
             background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.75)), url(../images/feathers.jpg);
             background-size: contain;
         }
 
         .container {
-            padding-top: 3em;
-            justify-content: space-evenly;
-            align-items: baseline;
-            display: flex;
-            flex-wrap: wrap;
+            margin: 1em 2em;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
             gap: 1em;
         }
 
@@ -41,7 +40,6 @@
             color:white;
             border: 1px solid white;
             border-radius: 10px;
-            max-width:20%;
         }
 
         .container ul {
@@ -49,15 +47,15 @@
             list-style-type: none;
             display: flex;
             gap: .25em;
-            flex-wrap:wrap;
-            justify-content:flex-start;
+            flex-wrap:nowrap;
+            align-content: baseline;
         }
 
         .container ul li {
-            max-width:fit-content;
             border: 1px solid white;
             padding: .5em;
             margin: .25em;
+            font-size: .8em;
         }
 
         .container img {
@@ -101,25 +99,18 @@
         .forms {
             background-color: #484d60;
         }
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 929px) {
             .container {
-                flex-direction: column;
-                align-items: center;
-                width: 100%;
+                display: grid;
+                grid-template-columns: 1fr;
                 gap: 1.5em;
-            }
-
-            .container div img {
-                max-width:100%;
-            }
-
-            .container > div {
-                margin: 0 1em;
-                max-width: 80%;
+                padding: 2em;
             }
 
             .container ul {
+                display: flex;
                 justify-content: center;
+                flex-wrap: wrap;
             }
         }
 
@@ -127,7 +118,7 @@
 </head>
 <body>
     <nav>
-        <h1>Ambrielle Gallegos</h1>
+        <h1>Projects</h1>
         <ul>
             <li><a href="../index.html" target="_blank">Home</a></li>
             <li><a href="projects.html"target="_blank">Projects</a></li>
@@ -228,7 +219,7 @@
         <div>
             <div>
                 <h2>Budget Planner Web App</h2>
-                <img src="https://placehold.co/250x175" alt="Picture of budget planner web app">
+                <img src="../images/planner.png" alt="Picture of budget planner web app">
                 <p>A simple budget calculator program with HTML and CSS.</p>
                     <ul>
                     <li class="html">HTML/CSS</li>
@@ -240,7 +231,7 @@
         <div>
             <div>
                 <h2>Bookshelf Management Web App</h2>
-                <img src="https://placehold.co/250x175" alt="Picture of bookshelf management web app">
+                <img src="../images/bookshelf.png" alt="Picture of bookshelf management web app">
                 <p>A simple program to practice string methods.</p>
                     <ul>
                     <li class="html">HTML/CSS</li>
@@ -252,7 +243,7 @@
         <div>
             <div>
                 <h2>Profile Card App</h2>
-                <img src="https://placehold.co/250x175" alt="Picture of calculator web app">
+                <img src="../images/profile.png" alt="Picture of calculator web app">
                 <p>A simple excercise to write and style HTML code using JavaScript and CSS.</p>
                     <ul>
                     <li class="html">HTML/CSS</li>
@@ -264,7 +255,7 @@
         <div>
             <div>
                 <h2>Task Manager Web App</h2>
-                <img src="https://placehold.co/250x175" alt="Picture of calculator web app">
+                <img src="../images/task.png" alt="Picture of calculator web app">
                 <p>A program that allows the user to create, edit, and delete tasks using JavaScript.</p>
                     <ul>
                     <li class="html">HTML/CSS</li>
@@ -288,7 +279,7 @@
         <div>
             <div>
                 <h2>Progress Bar Demo</h2>
-                <img src="https://placehold.co/250x175" alt="Image of project">
+                <img src="../images/bar.png" alt="Image of project">
                 <p>Practice assignment</p>
                 <ul>
                     <li class="html">HTML/CSS</li>
@@ -300,7 +291,7 @@
         <div>
             <div>
                 <h2>Font Style Previewer + Font Size Adjuster</h2>
-                <img src="https://placehold.co/250x175" alt="Image of project">
+                <img src="../images/font.png" alt="Image of project">
                 <p>Practice assignment</p>
                 <ul>
                     <li class="html">HTML/CSS</li>
@@ -312,7 +303,7 @@
         <div>
             <div>
                 <h2>Regex Quiz</h2>
-                <img src="https://placehold.co/250x175" alt="Image of project">
+                <img src="../images/regex.png" alt="Image of project">
                 <p>Practice assignment</p>
                 <ul>
                     <li class="html">HTML/CSS</li>
@@ -324,7 +315,7 @@
         <div>
             <div>
                 <h2>Pizza Delivery Tracker</h2>
-                <img src="https://placehold.co/250x175" alt="Image of project">
+                <img src="../images/pizza.png" alt="Image of project">
                 <p>Practice assignment</p>
                 <ul>
                     <li class="html">HTML/CSS</li>
@@ -336,7 +327,7 @@
         <div>
             <div>
                 <h2>Emoji Memory Game</h2>
-                <img src="https://placehold.co/250x175" alt="Image of project">
+                <img src="../images/memory.png" alt="Image of project">
                 <p>Practice assignment</p>
                 <ul>
                     <li class="html">HTML/CSS</li>
@@ -348,7 +339,7 @@
         <div>
             <div>
                 <h2>Flashcard App</h2>
-                <img src="https://placehold.co/250x175" alt="Image of project">
+                <img src="../images/flashcard.png" alt="Image of project">
                 <p>Practice assignment</p>
                 <ul>
                     <li class="html">HTML/CSS</li>
@@ -360,7 +351,7 @@
         <div>
             <div>
                 <h2>Hamburger Menu Demo</h2>
-                <img src="https://placehold.co/250x175" alt="Image of project">
+                <img src="../images/hamburger.png" alt="Image of project">
                 <p>Practice assignment</p>
                 <ul>
                     <li class="html">HTML/CSS</li>
@@ -372,7 +363,7 @@
         <div>
             <div>
                 <h2>Opacity Slider Demo</h2>
-                <img src="https://placehold.co/250x175" alt="Image of project">
+                <img src="../images/opacity.png" alt="Image of project">
                 <p>Practice assignment</p>
                 <ul>
                     <li class="html">HTML/CSS</li>
@@ -384,7 +375,7 @@
         <div>
             <div>
                 <h2>Typing Speed Tester Demo</h2>
-                <img src="https://placehold.co/250x175" alt="Image of project">
+                <img src="../images/typing.png" alt="Image of project">
                 <p>Practice assignment</p>
                 <ul>
                     <li class="html">HTML/CSS</li>
@@ -396,7 +387,7 @@
         <div>
             <div>
                 <h2>Task Manager</h2>
-                <img src="https://placehold.co/250x175" alt="Image of project">
+                <img src="../images/task.png" alt="Image of project">
                 <p>Practice assignment</p>
                 <ul>
                     <li class="html">HTML/CSS</li>
@@ -408,7 +399,7 @@
         <div>
             <div>
                 <h2>Boostrap Example</h2>
-                <img src="https://placehold.co/250x175" alt="Image of project">
+                <img src="../images/bootstrap.png" alt="Image of project">
                 <p>Practice assignment</p>
                 <ul>
                     <li class="html">HTML/CSS</li>
@@ -420,7 +411,7 @@
         <div>
             <div>
                 <h2>Tech Haven Electronic Store</h2>
-                <img src="https://placehold.co/250x175" alt="Image of project">
+                <img src="../images/tech.png" alt="Image of project">
                 <p>Practice assignment</p>
                 <ul>
                     <li class="html">HTML/CSS</li>
@@ -432,7 +423,7 @@
         <div>
             <div>
                 <h2>Capstone Project - Animal Finder</h2>
-                <img src="https://placehold.co/250x175" alt="Image of project">
+                <img src="../images/cap" alt="Image of project">
                 <p>Practice assignment</p>
                 <ul>
                     <li class="html">HTML/CSS</li>
